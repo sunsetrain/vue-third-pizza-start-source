@@ -1,5 +1,1 @@
-{
-  "template": {
-    "id": "html-academy-vue3-pizza"
-  }
-}
+{"templateId":"html-academy-vue3-pizza","jest":true,"devPort":8080}
