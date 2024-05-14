@@ -12,8 +12,9 @@
           :data-transfer="ingredientType"
           :draggable="getValue(ingredientType.value) < MAX_INGREDIENT_COUNT"
         >
-          <div class="filling">
+          <div draggable="false" class="filling">
             <img
+              draggable="false"
               :src="getImage(ingredientType.image)"
               :alt="ingredientType.name"
             />
@@ -124,6 +125,10 @@ const getImage = (image) => {
   min-height: 40px;
   margin-right: 17px;
   margin-bottom: 35px;
+
+  &:hover .filling {
+    background-color: #f1f1f1;
+  }
 }
 
 .ingredients__counter {
@@ -284,6 +289,9 @@ const getImage = (image) => {
   display: block;
 
   padding-left: 36px;
+
+  background-color: #fff;
+  transition: background-color 0.25s;
 
   img {
     @include p_center-v;
